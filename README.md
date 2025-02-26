@@ -3,7 +3,7 @@
 [iPhone-13-PRO-localhost-i-dg-q58r-udeo.webm](https://github.com/user-attachments/assets/fd050e4e-0679-46b0-8608-2ee1675b1495)
 
 
-Das „Rock Paper Scissors Game“ wurde am dritten Tag des React-Moduls im Rahmen eines Web-Development-Kurses entwickelt. Hauptziel war es, meine Kenntnisse in React, insbesondere der Verwendung von useState(), zu vertiefen. In diesem Projekt habe ich ein interaktives Spiel erstellt, bei dem der Nutzer gegen den Computer antritt und aus den klassischen Optionen „Rock“, „Paper“ und „Scissors“ wählen kann. Nach jeder Auswahl wird das Ergebnis direkt angezeigt, und der Nutzer hat jederzeit die Möglichkeit, das Spiel zurückzusetzen.
+Das „Rock Paper Scissors Game“ wurde im Rahmen eines Web-Development-Kurses entwickelt. Hauptziel war es, meine Kenntnisse in React, insbesondere der Verwendung von useState(), zu vertiefen. In diesem Projekt habe ich ein interaktives Spiel erstellt, bei dem der Nutzer gegen den Computer antritt und aus den klassischen Optionen „Rock“, „Paper“ und „Scissors“ wählen kann. Nach jeder Auswahl wird das Ergebnis direkt angezeigt, und der Nutzer hat jederzeit die Möglichkeit, das Spiel zurückzusetzen. Zudem wird der Spielstand über mehrere Runden hinweg verfolgt.
 
 ## Table of Contents 
 
@@ -17,13 +17,14 @@ Das „Rock Paper Scissors Game“ wurde am dritten Tag des React-Moduls im Rahm
 
 ## Über das Projekt
 
-Das „Rock Paper Scissors Game“ ist ein einfaches Browser-Spiel, das mit React und TypeScript entwickelt wurde. Das Spiel ermöglicht es dem Nutzer, aus drei Optionen – „Rock“, „Paper“ und „Scissors“ – auszuwählen. Anschließend wird der Computer eine zufällige Wahl treffen und das Ergebnis (Gewinn, Verlust oder Unentschieden) angezeigt. Das Spiel bietet auch einen Reset-Button, um das Spiel neu zu starten.
+Das „Rock Paper Scissors Game“ ist ein einfaches Browser-Spiel, das mit React und TypeScript entwickelt wurde. Das Spiel ermöglicht es dem Nutzer, aus drei Optionen – „Rock“, „Paper“ und „Scissors“ – auszuwählen. Anschließend wird der Computer eine zufällige Wahl treffen und das Ergebnis (Gewinn, Verlust oder Unentschieden) angezeigt. Der Spieler hat die Möglichkeit, den Punktestand während des Spiels zu verfolgen, da sowohl die Anzahl der gewonnenen Runden des Spielers als auch die des Computers angezeigt wird. Es gibt zudem eine Anzeige für die aktuelle Runde und einen Reset-Button, um das Spiel neu zu starten.
 
 Die grundlegenden Funktionen umfassen:
 
 * Auswahl der Spieloptionen durch den Nutzer
 * Zufällige Auswahl des Computers aus denselben Optionen
 * Anzeige des Ergebnisses (Gewinn, Verlust oder Unentschieden)
+* Zählung der Runden und Spielstandanzeige
 * Möglichkeit, das Spiel zurückzusetzen
 
 ## Tech Stack
@@ -80,7 +81,7 @@ Folgende Programme solltest du installiert haben:
 
 ## Design
 
-Für das Design des Spiels habe ich mich für ein minimalistisches Layout entschieden, das den Fokus auf die Interaktivität und das Spiel selbst legt. Die Auswahlmöglichkeiten für den Nutzer werden als klickbare Bilder dargestellt, die jeweils die Optionen „Rock“, „Paper“ und „Scissors“ repräsentieren. Das Ergebnis wird in Form eines Textes angezeigt und lässt den Spieler wissen, ob er gewonnen, verloren oder unentschieden gespielt hat.
+Für das Design des Spiels habe ich mich für ein minimalistisches Layout entschieden, das den Fokus auf die Interaktivität und das Spiel selbst legt. Die Auswahlmöglichkeiten für den Nutzer werden als klickbare Bilder dargestellt, die jeweils die Optionen „Rock“, „Paper“ und „Scissors“ repräsentieren. Das Ergebnis wird in Form eines Textes angezeigt und lässt den Spieler wissen, ob er gewonnen, verloren oder unentschieden gespielt hat. Die Runden und der aktuelle Punktestand werden visuell angezeigt, um das Spielerlebnis noch interaktiver zu gestalten.
 
 
 ## Deployment
