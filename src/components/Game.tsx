@@ -8,13 +8,14 @@ const Game = () => {
   const [cpu, setCpu] = useState("");
   const [result, setResult] = useState("");
 
-  // cpu und player wählen
-  // cpu wird in Zwischenergebnis gespeichert, damit die Bedingungen zur richtigen Zeit "berechnet" werden
+  //asynchrone Funktion
+  //Wahl cpu in Zwischenergebnis speichern
+  //Die Auswahl vom Player durch Parameter gesetzt (eine Auswahl aus dem Array)
   const handleClick = (selection: string) => {
     setPlayer(selection);
     const cpuChoice = allOptions[Math.floor(Math.random() * 3)];
     setCpu(cpuChoice);
-
+    //Bedingungen für Ergebnis
     if (
       (selection === "Scissors" && cpuChoice === "Paper") ||
       (selection === "Paper" && cpuChoice === "Rock") ||
@@ -34,16 +35,18 @@ const Game = () => {
 
   //Funktion für den Reset Button
   const resetGame = () => {
-    setPlayer("")
-    setCpu("")
-    setResult("")
-  }
+    setPlayer("");
+    setCpu("");
+    setResult("");
+  };
 
   return (
     <>
       <section className="flex flex-col items-center mb-30 lg:mb-10">
-        <h1 className="text-2xl lg:text-6xl my-5">{allOptions[0]} {allOptions[1]} {allOptions[2]}</h1>
-        <h3 className="lg:text-3xl">Choose your weapon</h3>
+        <h1 className="text-2xl lg:text-6xl my-5">
+          {allOptions[0]} {allOptions[1]} {allOptions[2]}
+        </h1>
+        <h3 className="lg:text-3xl">Click to choose</h3>
       </section>
       <section>
         <div className="flex gap-10 mb-20 lg:mb-10">
@@ -70,16 +73,28 @@ const Game = () => {
           </figure>
         </div>
       </section>
-      <section className="flex flex-col gap-3 mb-10 lg:mb-10 items-center">
-        <p>Player: {player}</p>
-        <p>CPU: {cpu}</p>
-        <p className="font-bold text-2xl">{result}</p>
+      <section className="flex flex-col gap-3 mb-5 items-center">
+        <div className="flex items-center gap-2">
+        <p>Player:</p>
+        {player === allOptions[0] && <img className="w-7 h-7" src="/pngaaa.com-3313783.png" alt="Rock" />}
+        {player === allOptions[1] && <img className="w-7 h-7" src="/pngaaa.com-3313779.png" alt="Paper" />}
+        {player === allOptions[2] && <img className="w-7 h-7" src="/pngaaa.com-3313815.png" alt="Paper" />}
+        </div>
+       <div className="flex items-center gap-5">
+       <p>CPU:</p>
+       {cpu === allOptions[0] && <img className="w-7 h-7" src="/pngaaa.com-3313783.png" alt="Rock" />}
+       {cpu === allOptions[1] && <img className="w-7 h-7" src="/pngaaa.com-3313779.png" alt="Paper" />}
+       {cpu === allOptions[2] && <img className="w-7 h-7" src="/pngaaa.com-3313815.png" alt="Paper" />}
+       </div>
+        <p className="font-bold text-2xl mt-3">{result}</p>
       </section>
-   
-     <button onClick={resetGame} className="bg-[#fbde56] py-3 px-10 rounded-full border-[#601154] border-4 cursor-pointer">
+
+      <button
+        onClick={resetGame}
+        className="bg-[#fbde56] py-3 px-10 rounded-full border-[#601154] border-4 cursor-pointer"
+      >
         Reset
       </button>
-
     </>
   );
 };
