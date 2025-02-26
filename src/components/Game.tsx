@@ -91,7 +91,7 @@ const Game = () => {
 
       <button
         onClick={resetGame}
-        className="bg-[#fbde56] py-3 px-10 rounded-full border-[#601154] border-4 cursor-pointer"
+        className="bg-[#fbde56] py-1 lg:py-3 px-3 lg:px-10 rounded-full border-[#601154] border-2 lg:border-4 cursor-pointer"
       >
         Reset
       </button>
