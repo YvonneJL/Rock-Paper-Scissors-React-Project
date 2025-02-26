@@ -1,3 +1,4 @@
+//! ABSTAND VERÄNDERN; WENN AUF 0
 import { useState } from "react";
 
 const Game = () => {
@@ -55,8 +56,8 @@ const Game = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center mb-30 lg:mb-10">
-        <h1 className="text-2xl lg:text-6xl my-2">
+      <section className={`${round === 0 ? "mb-40 lg-mb-20": "mb-30 lg:mb-10"} flex flex-col items-center`}>
+        <h1 className="text-2xl lg:text-6xl my-3">
           {allOptions[0]} {allOptions[1]} {allOptions[2]}
         </h1>
         <h3 className="lg:text-2xl">Click to choose</h3>
@@ -92,14 +93,14 @@ const Game = () => {
         {player === allOptions[0] && <img className="w-7 h-7" src="/pngaaa.com-3313783.png" alt="Rock" />}
         {player === allOptions[1] && <img className="w-7 h-7" src="/pngaaa.com-3313779.png" alt="Paper" />}
         {player === allOptions[2] && <img className="w-7 h-7" src="/pngaaa.com-3313815.png" alt="Paper" />}
-        <p>YOU:</p>
+        <p className={`${round === 0 ? "invisible": ""}`}>YOU:</p>
         <p className={`${round === 0 ? "invisible": ""} font-bold`}>{roundsWonByPlayer}</p>
         </div>
        <div className="flex items-center justify-between w-30">
        {cpu === allOptions[0] && <img className="w-7 h-7" src="/pngaaa.com-3313783.png" alt="Rock" />}
        {cpu === allOptions[1] && <img className="w-7 h-7" src="/pngaaa.com-3313779.png" alt="Paper" />}
        {cpu === allOptions[2] && <img className="w-7 h-7" src="/pngaaa.com-3313815.png" alt="Paper" />}
-       <p>CPU:</p>
+       <p className={`${round === 0 ? "invisible": ""}`}>CPU:</p>
        <p className={`${round === 0 ? "invisible": ""} font-bold`}>{roundsWonByCPU}</p>
        </div>
         <p className="font-bold text-2xl mt-3">{result}</p>
@@ -107,7 +108,7 @@ const Game = () => {
 
       <button
         onClick={resetGame}
-        className="bg-[#fbde56] py-1 lg:py-3 px-3 lg:px-10 rounded-full border-[#601154] border-2 lg:border-4 cursor-pointer"
+        className={`${round === 0 ? "invisible": ""} bg-[#fbde56] py-1 lg:py-3 px-3 lg:px-10 rounded-full border-[#601154] border-2 lg:border-4 cursor-pointer`}
       >
         Reset
       </button>
