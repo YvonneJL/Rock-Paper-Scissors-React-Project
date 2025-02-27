@@ -28,19 +28,33 @@ const Game = () => {
       (selection === "Rock" && cpuChoice === "Scissors")
     ) {
       setResult("You Win");
-      setRoundWonByPlayer(roundsWonByPlayer + 1)
-      setRound(round +1)
+      //setRoundWonByPlayer(roundsWonByPlayer + 1)
+      setRoundWonByPlayer((prev)=> {
+        return prev +1
+      })
+      //setRound(round +1)
+      setRound((prev)=> {
+        return prev +1
+      })
     } else if (
       (selection === "Scissors" && cpuChoice === "Rock") ||
       (selection === "Paper" && cpuChoice === "Scissors") ||
       (selection === "Rock" && cpuChoice === "Paper")
     ) {
       setResult("You Lose");
-      setRoundWonByCPU(roundsWonByCPU + 1)
-      setRound(round +1)
+      //setRoundWonByCPU(roundsWonByCPU + 1)
+      setRoundWonByCPU((prev)=> {
+        return prev +1
+      })
+      setRound((prev)=> {
+      return prev +1
+
+      })
     } else if (selection === cpuChoice) {
       setResult("Draw");
-      setRound(round +1)
+      setRound((prev)=> {
+        return prev +1
+      })
     }
   };
 
