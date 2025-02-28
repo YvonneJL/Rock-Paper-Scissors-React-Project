@@ -1,6 +1,7 @@
 # Rock // Paper // Scissors
 
-[iPhone-13-PRO-localhost-i-dg-q58r-udeo.webm](https://github.com/user-attachments/assets/fd050e4e-0679-46b0-8608-2ee1675b1495)
+[Macbook-Air-localhost-jxqt-86xgs2zrt.webm](https://github.com/user-attachments/assets/cc354c8f-520c-417e-8bb1-6cd8230e920a)
+
 
 
 Das „Rock Paper Scissors Game“ wurde im Rahmen eines Web-Development-Kurses entwickelt. Hauptziel war es, meine Kenntnisse in React, insbesondere der Verwendung von useState() zu vertiefen. In diesem Projekt habe ich ein interaktives Spiel erstellt, bei dem der Nutzer gegen den Computer antritt und aus den klassischen Optionen „Rock“, „Paper“ und „Scissors“ wählen kann. Nach jeder Auswahl wird das Ergebnis direkt angezeigt, und der Nutzer hat jederzeit die Möglichkeit, das Spiel zurückzusetzen. Zudem wird der Spielstand über mehrere Runden hinweg verfolgt. Das Spiel verfolgt den Punktestand über mehrere Runden hinweg und endet nach 5 Runden automatisch. Am Ende zeigt das Spiel eine Gesamtbewertung an, die den Spieler entweder als Sieger, Verlierer oder als gleichwertigen Gegner zum Computer darstellt. Dies ermöglicht eine spannende und herausfordernde Spielerfahrung mit einer klaren Endauswertung.
