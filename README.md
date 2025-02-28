@@ -3,7 +3,7 @@
 [iPhone-13-PRO-localhost-i-dg-q58r-udeo.webm](https://github.com/user-attachments/assets/fd050e4e-0679-46b0-8608-2ee1675b1495)
 
 
-Das „Rock Paper Scissors Game“ wurde im Rahmen eines Web-Development-Kurses entwickelt. Hauptziel war es, meine Kenntnisse in React, insbesondere der Verwendung von useState(), zu vertiefen. In diesem Projekt habe ich ein interaktives Spiel erstellt, bei dem der Nutzer gegen den Computer antritt und aus den klassischen Optionen „Rock“, „Paper“ und „Scissors“ wählen kann. Nach jeder Auswahl wird das Ergebnis direkt angezeigt, und der Nutzer hat jederzeit die Möglichkeit, das Spiel zurückzusetzen. Zudem wird der Spielstand über mehrere Runden hinweg verfolgt.
+Das „Rock Paper Scissors Game“ wurde im Rahmen eines Web-Development-Kurses entwickelt. Hauptziel war es, meine Kenntnisse in React, insbesondere der Verwendung von useState() zu vertiefen. In diesem Projekt habe ich ein interaktives Spiel erstellt, bei dem der Nutzer gegen den Computer antritt und aus den klassischen Optionen „Rock“, „Paper“ und „Scissors“ wählen kann. Nach jeder Auswahl wird das Ergebnis direkt angezeigt, und der Nutzer hat jederzeit die Möglichkeit, das Spiel zurückzusetzen. Zudem wird der Spielstand über mehrere Runden hinweg verfolgt. Das Spiel verfolgt den Punktestand über mehrere Runden hinweg und endet nach 5 Runden automatisch. Am Ende zeigt das Spiel eine Gesamtbewertung an, die den Spieler entweder als Sieger, Verlierer oder als gleichwertigen Gegner zum Computer darstellt. Dies ermöglicht eine spannende und herausfordernde Spielerfahrung mit einer klaren Endauswertung.
 
 ## Table of Contents 
 
@@ -17,7 +17,14 @@ Das „Rock Paper Scissors Game“ wurde im Rahmen eines Web-Development-Kurses 
 
 ## Über das Projekt
 
-Das „Rock Paper Scissors Game“ ist ein einfaches Browser-Spiel, das mit React und TypeScript entwickelt wurde. Das Spiel ermöglicht es dem Nutzer, aus drei Optionen – „Rock“, „Paper“ und „Scissors“ – auszuwählen. Anschließend wird der Computer eine zufällige Wahl treffen und das Ergebnis (Gewinn, Verlust oder Unentschieden) angezeigt. Der Spieler hat die Möglichkeit, den Punktestand während des Spiels zu verfolgen, da sowohl die Anzahl der gewonnenen Runden des Spielers als auch die des Computers angezeigt wird. Es gibt zudem eine Anzeige für die aktuelle Runde und einen Reset-Button, um das Spiel neu zu starten.
+<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 5vh">
+    <img style="width: 50%; height: 100vh; object-fit: contain" src="./public/iPhone-13-PRO-localhost.png">
+    <img style="width: 50%; height: auto; object-fit: contain"  src="./public/Macbook-Air-localhost.png">
+
+</div>
+
+
+In diesem Projekt wird die Spiellogik mit useState() und useEffect() gesteuert. Der handleClick-Handler verwaltet die Auswahl des Spielers und des Computers und prüft das Ergebnis der Runde. Die useEffect()-Hook wird verwendet, um nach fünf Runden das Endergebnis anzuzeigen und die Nachricht entsprechend zu gestalten (z. B. „Du hast gewonnen“ oder „Die Maschine hat gewonnen“). Nach jedem Spiel kann der Benutzer das Spiel zurücksetzen, um von vorne zu beginnen.
 
 Die grundlegenden Funktionen umfassen:
 
@@ -26,6 +33,7 @@ Die grundlegenden Funktionen umfassen:
 * Anzeige des Ergebnisses (Gewinn, Verlust oder Unentschieden)
 * Zählung der Runden und Spielstandanzeige
 * Möglichkeit, das Spiel zurückzusetzen
+* Anzeige der Gesamtbewertung aus 5 Runden
 
 ## Tech Stack
   
