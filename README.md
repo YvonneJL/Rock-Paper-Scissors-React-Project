@@ -18,7 +18,7 @@ Das „Rock Paper Scissors Game“ wurde im Rahmen eines Web-Development-Kurses 
 ## Über das Projekt
 
 <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 5vh">
-    <img style="width: 45%; height: 60vh; object-fit: contain" src="./public/iPhone-13-PRO-localhost.png">
+    <img style="width: 40%; height: 60vh; object-fit: contain" src="./public/iPhone-13-PRO-localhost.png">
     <img style="width: 45%; height: auto; object-fit: contain"  src="./public/Macbook-Air-localhost.png">
 
 </div>
