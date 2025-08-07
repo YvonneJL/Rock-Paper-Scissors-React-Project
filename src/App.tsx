@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    <main className="flex flex-col items-center lg:w-2/3 mx-auto bg-amber-100 h-screen py-5">
+    <main className="flex flex-col items-center mx-auto bg-gray-50 h-screen py-5">
       <Game/>
     </main>
      

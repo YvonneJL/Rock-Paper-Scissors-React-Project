@@ -8,6 +8,9 @@ const Game = () => {
   const [cpu, setCpu] = useState("");
   const [result, setResult] = useState("");
 
+  //headline visibility
+  const [visibilityHeadline, setVisibilityHeadline] = useState<boolean>(false)
+
   //States für Spielstand und Runden
   const [roundsWonByPlayer, setRoundWonByPlayer] = useState(0);
   const [roundsWonByCPU, setRoundWonByCPU] = useState(0);
@@ -23,6 +26,10 @@ const Game = () => {
   const handleClick = (selection: string) => {
     //erste Zeile, (return), um die Klickfunktion zu beenden, wenn Runde 5 erreicht ist
     if (round >= 5 || gameOver) return;
+
+    //headline
+    setVisibilityHeadline(true)
+
     setPlayer(selection);
     const cpuChoice = allOptions[Math.floor(Math.random() * 3)];
     setCpu(cpuChoice);
@@ -98,11 +105,14 @@ const Game = () => {
     <>
       <section
         className={`${
-          round === 0 ? "mb-40 lg-mb-20" : "mb-30 lg:mb-10"
+          round === 0 ? "mb-40 lg-mb-20" : "mb-20 lg:mb-10"
         } flex flex-col items-center`}
       >
-        <h1 className="text-2xl lg:text-6xl my-3">Defeat the Machine</h1>
-        <h3 className="lg:text-2xl">5 Rounds to Glory</h3>
+       {visibilityHeadline &&
+
+        <h3 className="text-2xl lg:text-4xl my-3 tracking-wider font-semibold">First to win 3 rounds</h3>
+
+       }
       </section>
 
       {!gameOver ? (
@@ -138,7 +148,7 @@ const Game = () => {
           </h2>
           <button
             onClick={resetGame}
-            className="bg-[#fbde56] py-1 lg:py-3 px-3 lg:px-10 rounded-full border-[#601154] border-2 lg:border-4 cursor-pointer mb-15"
+            className="bg-[#dbaad4] py-1 lg:py-3 px-3 lg:px-10 rounded-full border-[#601154] border-2 lg:border-4 cursor-pointer mb-15"
           >
             Play Again
           </button>
@@ -207,7 +217,7 @@ const Game = () => {
           onClick={resetGame}
           className={`${
             round === 0 ? "invisible" : ""
-          } bg-[#fbde56] py-1 lg:py-3 px-3 lg:px-10 rounded-full border-[#601154] border-2 lg:border-4 cursor-pointer`}
+          } bg-[#dbaad4] p-1 mt-10 lg:py-3 px-3 lg:px-10 rounded-full border-[#601154] border-2 lg:border-4 cursor-pointer`}
         >
           Reset
         </button>
